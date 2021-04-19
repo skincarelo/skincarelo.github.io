@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>Skincarelo</title>
+   <link href="images/skincarelo.png" rel="icon">
+
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+      * {
+         box-sizing: border-box;
+      }
+
+      #myInput {
+         background-image: url('images/search.png');
+         background-size: 25px;
+         background-position: 680px 12px;
+         background-repeat: no-repeat;
+         width: 100%;
+         font-size: 16px;
+         padding: 12px 20px 12px 15px;
+         border: 1px solid #ddd;
+         margin-bottom: 12px;
+      }
+
+      #myUL {
+         list-style-type: none;
+         padding: 0;
+         margin: 0;
+      }
+
+      #myUL li a {
+         width: 100%;
+      }
+
+      #myUL li a:hover:not(.header) {
+         background-color: #eee;
+      }
+   </style>
+
+</head>
+
+<body class="gradients" data-spy="scroll" data-target=".navbar" data-offset="90">
+
+   <!--PreLoader-->
+   <div class="loader">
+      <div class="loader-inner">
+         <div class="circle"></div>
+      </div>
+   </div>
+   <!--PreLoader Ends-->
+
+   <!--About us-->
+   <section id="aboutus" class="padding_half">
+      <div class="container">
+         <div class="row aboutus-wrapp d-flex justify-content-center align-items-center">
+
+            <div class="col-lg-8 col-md-7 col-sm-7" style="text-align: center">
+               <div class="image bottom20">
+                  <div align="center">
+                     <img src="images/skincarelo.png" style="max-width: 30%;max-height: 30%; border-radius: 20%"
+                        alt="image">
+                  </div>
+               </div>
+               <div class="bottom35">
+                  <h4 class="text-capitalize font-xlight darkcolor">
+                     <span class="font-normal ">Ayo</span>
+
+                     <span class="font-xlight">Pilih Produkmu</span>
+                     <span class="font-normal color-two">Disini</span>
+                  </h4>
+               </div>
+               <div class="bottom25">
+                  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari produk keinginanmu.."
+                     title="Type in a name">
+               </div>
+               <ul id="myUL">
+                  <li>
+                     <div class="bottom25">
+                        <a href="https://shp.ee/xk9jxm8"
+                           class="button gradient_bg_one" style="text-align: center"><span
+                              style="float: left;">1. </span>SERUM WHITENING WATERMELON GLOW</a>
+                     </div>
+                  </li>
+                  <li>
+                     <div class="bottom25">
+                        <a href="https://shp.ee/kpgpsyy"
+                           class="button gradient_bg_one" style="text-align: center"><span
+                              style="float: left;">2. </span>Facial Oil Serum Bio Beauty Lab</a>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!--Site Footer Here-->
+   <footer id="site-footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 col-sm-12 text-center">
+               <ul class="social-icons bottom25 wow fadeInUp" data-wow-delay="300ms">
+                  <li><a href="wa.me/62895384115000"><i class="fab fa-whatsapp"></i> </a> </li>
+                  <li><a href="https://www.facebook.com/skincarekalian/"><i class="fab fa-facebook"></i> </a> </li>
+                  <li><a href="https://www.instagram.com/skincarelo/"><i class="fab fa-instagram"></i> </a> </li>
+               </ul>
+               <p class="copyrights wow fadeInUp" data-wow-delay="400ms"> &copy; 2021. Made with <i class="fas fa-heart text-danger"></i> by <a
+                     href="#.">Skincarelo</a> </p>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+
+   <script>
+      function myFunction() {
+         var input, filter, ul, li, a, i, txtValue;
+         input = document.getElementById("myInput");
+         filter = input.value.toUpperCase();
+         ul = document.getElementById("myUL");
+         li = ul.getElementsByTagName("li");
+         for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+               li[i].style.display = "";
+            } else {
+               li[i].style.display = "none";
+            }
+         }
+      }
+   </script>
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="js/jquery-3.1.1.min.js"></script>
+
+   <!--Bootstrap Core-->
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/functions.js"></script>
+
+</body>
+
+</html>
